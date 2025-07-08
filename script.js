@@ -47,7 +47,7 @@ function generateNpc() {
   const trait = getRandomItem(traits);
   const profession = getRandomItem(professions);
 
-  const result = `${firstName} ${surname} — a ${race} ${profession} ${trait}`;
+  const result = `${firstName} ${surname} — a ${trait} ${race} ${profession}`;
   document.getElementById("npcResult").textContent = result;
 }
 
