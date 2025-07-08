@@ -1,4 +1,4 @@
-
+// NPC Arrays
 const firstNames = [
   "Arlo/Annie", "Hannibal/Helvetica", "Louie/Lorentia", "Kaylo/Kyla",
   "Lonnie/Lynn", "Boonie/Belle", "Gurzam/Gorlene", "Flip/Filomena",
@@ -51,3 +51,91 @@ function generateNpc() {
 }
 
 document.getElementById("generateNpc").addEventListener("click", generateNpc);
+
+// Places arrays
+
+const settlements = [
+  "Red Rock", "Keller's Branding", "Barronhill", "Fort Valor", "Coldwater", "Serendipity",
+  "Greenhaven", "Nero's Rest", "Irondale", "Jonisport", "Poloni", "Naraway", "Trippletop",
+  "Selmet", "Hollanoke", "Alamora", "Marrawin", "Uldover", "Nully", "Kanigonee"
+];
+
+const settlementPOIs = [
+  "Gallows", "Observatory", "Arena", "Temple", "Stables", "Prison", "Amphitheater",
+  "Water/Wind Mill", "Warehouse", "Brewery", "Library", "Mage's Tower", "Academy",
+  "Town Common", "Cemetery", "Museum", "Tourney Grounds", "Bank", "Manor", "Town Hall / Palace"
+];
+
+const shops = [
+  "Barber", "Curiosity Shop", "Tailor", "Stockyard", "Bookseller", "Fortune Teller",
+  "Produce Market", "Tattooist", "Tea House", "Carpenter", "Armorer", "Butcher",
+  "Outfitter", "Cobbler", "Weaponsmith", "Jeweler", "Bakery", "Alchemist", "Tannery", "Shady"
+];
+
+const taverns = [
+  "The Frosty Fiddle", "The Copper Candle", "The Dancing Dragon", "The Wanton Weasel",
+  "Cassie's Cardhouse", "The Tin Trumpet", "The Bucking Beaver", "The Sleeping Saint",
+  "Iggy's Inn", "The Blazing Bull", "The Merry Monk", "The Jolly Junebug",
+  "The Smoking Staff", "The Lovesick Lion", "The Seven Serpents", "The Crooked Count",
+  "The Beached Beluga", "The Stubborn Sow", "The Jeering Djinn", "The Prickly Prince"
+];
+
+const wildsRegions = [
+  "Lonely Lake", "Giants' Grave", "Castaway Cove", "Revenant River", "Cutthroat Canyon",
+  "Veridian Valley", "Whispering Woods", "Bullywug Bog", "Gilded Glacier",
+  "Feymaiden's Forest", "Royal Road", "Mirage Mesa", "Stinkflame Swamp",
+  "Gossamer Grassland", "Shifting Shoreline", "Madman's Mountain", "Crumbling Caldera",
+  "Goblins Gorge", "Singing Slopes", "Misty Moors"
+];
+
+const wildsPOIs = [
+  "The Under-Geyser", "Jergin's Hole", "Sundered Keep", "The Trollstones",
+  "Deva's Bridge", "Fortuna's Falls", "Featherstone Lodge", "Crimson Hot Springs",
+  "Glowstone Mine", "Bargainer's Pond", "Sweetwater Cavern", "The Home of Gnome",
+  "Castle Witchrot", "Miraculo's Tower", "Gristlesnoot's Lair", "Sunken Bathhouse",
+  "Sycamora the Ancient", "Bluetusk Orc Camp", "Runic Monolith", "Forgotten Shrine"
+];
+
+// General random generator
+function getRandomItem(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// Place generators
+function generateSettlement() {
+  const settlement = getRandomItem(settlements);
+  document.getElementById("placeResult").textContent = `Settlement: ${settlement}`;
+}
+
+function generateSettlementPOI() {
+  const poi = getRandomItem(settlementPOIs);
+  document.getElementById("placeResult").textContent = `Settlement POI: ${poi}`;
+}
+
+function generateShop() {
+  const shop = getRandomItem(shops);
+  document.getElementById("placeResult").textContent = `Shop: ${shop}`;
+}
+
+function generateTavern() {
+  const tavern = getRandomItem(taverns);
+  document.getElementById("placeResult").textContent = `Tavern: ${tavern}`;
+}
+
+function generateWildsRegion() {
+  const region = getRandomItem(wildsRegions);
+  document.getElementById("placeResult").textContent = `Wilds Region: ${region}`;
+}
+
+function generateWildsPOI() {
+  const poi = getRandomItem(wildsPOIs);
+  document.getElementById("placeResult").textContent = `Wilds POI: ${poi}`;
+}
+
+// Event listeners
+document.getElementById("generateSettlement").addEventListener("click", generateSettlement);
+document.getElementById("generateSettlementPOI").addEventListener("click", generateSettlementPOI);
+document.getElementById("generateShop").addEventListener("click", generateShop);
+document.getElementById("generateTavern").addEventListener("click", generateTavern);
+document.getElementById("generateWildsRegion").addEventListener("click", generateWildsRegion);
+document.getElementById("generateWildsPOI").addEventListener("click", generateWildsPOI);
