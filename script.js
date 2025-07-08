@@ -87,7 +87,7 @@ const titles = [
 
 function generateTitle() {
   const title = getRandomItem(titles);
-  document.getElementById("titleResult").textContent = `Title: ${title}`;
+  document.getElementById("titleResult").textContent = `${title}`;
 }
 
 document.getElementById("generateTitle").addEventListener("click", generateTitle);
