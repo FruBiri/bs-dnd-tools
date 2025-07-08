@@ -41,13 +41,12 @@ function getRandomItem(arr) {
 
 function generateNpc() {
   const namePair = getRandomItem(firstNames);
-  const firstName = namePair[Math.floor(Math.random() * 2)];
   const surname = getRandomItem(surnames);
   const race = getRandomItem(races);
   const trait = getRandomItem(traits);
   const profession = getRandomItem(professions);
 
-  const result = `${firstName} ${surname} — a ${trait} ${race} ${profession}`;
+  const result = `${namePair} ${surname} — a ${trait} ${race} ${profession}`;
   document.getElementById("npcResult").textContent = result;
 }
 
