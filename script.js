@@ -1,15 +1,15 @@
 
 const firstNames = [
-  ["Arlo/Annie"], ["Hannibal/Helvetica)"], ["Louie/Lorentia"], ["Kaylo/Kyla"],
-  ["Lonnie/Lynn"], ["Boonie/Belle"], ["Gurzam/Gorlene"], ["Flip/Filomena"],
-  ["Vordo/Vesta"], ["Markil/Marta"], ["Keenwit/Kora"], ["Silvan/Sella"],
-  ["Jasper/Juniper"], ["Aldus/Alana"], ["Hawk/Hestia"], ["Kitt/Katt"],
-  ["Tom/Tera"], ["Bognose/Brula"], ["Oldo/Oliviette"], ["Huzmar/Halune"],
-  ["Dusty/Dagmar"], ["Soren/Solasta"], ["Mundin/Moonie"], ["Conrad/Cassidy"],
-  ["Florian/Felicia"], ["Elroy/Eliza"], ["Willard/Willomena"], ["Boffin/Braila"],
-  ["Norris/Nephree"], ["Angelo/Aquila"], ["Ira/Isabi"], ["Rylan/Renetta"],
-  ["Axel/Amortia"], ["Poz/Pearline"], ["Xoran/Xera"], ["Duncel/Dazel"],
-  ["Quentin/Queenie"], ["Boggis/Brynwith"], ["Yorvin/Yanna"], ["Rorick/Rosie"]
+  "Arlo/Annie", "Hannibal/Helvetica", "Louie/Lorentia", "Kaylo/Kyla",
+  "Lonnie/Lynn", "Boonie/Belle", "Gurzam/Gorlene", "Flip/Filomena",
+  "Vordo/Vesta", "Markil/Marta", "Keenwit/Kora", "Silvan/Sella",
+  "Jasper/Juniper", "Aldus/Alana", "Hawk/Hestia", "Kitt/Katt",
+  "Tom/Tera", "Bognose/Brula", "Oldo/Oliviette", "Huzmar/Halune",
+  "Dusty/Dagmar", "Soren/Solasta", "Mundin/Moonie", "Conrad/Cassidy",
+  "Florian/Felicia", "Elroy/Eliza", "Willard/Willomena", "Boffin/Braila",
+  "Norris/Nephree", "Angelo/Aquila", "Ira/Isabi", "Rylan/Renetta",
+  "Axel/Amortia", "Poz/Pearline", "Xoran/Xera", "Duncel/Dazel",
+  "Quentin/Queenie", "Boggis/Brynwith", "Yorvin/Yanna", "Rorick/Rosie"
 ];
 
 const surnames = [
