@@ -1,15 +1,15 @@
 
 const firstNames = [
-  ["Arlo", "Annie"], ["Hannibal", "Helvetica"], ["Louie", "Lorentia"], ["Kaylo", "Kyla"],
-  ["Lonnie", "Lynn"], ["Boonie", "Belle"], ["Gurzam", "Gorlene"], ["Flip", "Filomena"],
-  ["Vordo", "Vesta"], ["Markil", "Marta"], ["Keenwit", "Kora"], ["Silvan", "Sella"],
-  ["Jasper", "Juniper"], ["Aldus", "Alana"], ["Hawk", "Hestia"], ["Kitt", "Katt"],
-  ["Tom", "Tera"], ["Bognose", "Brula"], ["Oldo", "Oliviette"], ["Huzmar", "Halune"],
-  ["Dusty", "Dagmar"], ["Soren", "Solasta"], ["Mundin", "Moonie"], ["Conrad", "Cassidy"],
-  ["Florian", "Felicia"], ["Elroy", "Eliza"], ["Willard", "Willomena"], ["Boffin", "Braila"],
-  ["Norris", "Nephree"], ["Angelo", "Aquila"], ["Ira", "Isabi"], ["Rylan", "Renetta"],
-  ["Axel", "Amortia"], ["Poz", "Pearline"], ["Xoran", "Xera"], ["Duncel", "Dazel"],
-  ["Quentin", "Queenie"], ["Boggis", "Brynwith"], ["Yorvin", "Yanna"], ["Rorick", "Rosie"]
+  ["Arlo/Annie"], ["Hannibal/Helvetica)"], ["Louie/Lorentia"], ["Kaylo/Kyla"],
+  ["Lonnie/Lynn"], ["Boonie/Belle"], ["Gurzam/Gorlene"], ["Flip/Filomena"],
+  ["Vordo/Vesta"], ["Markil/Marta"], ["Keenwit/Kora"], ["Silvan/Sella"],
+  ["Jasper/Juniper"], ["Aldus/Alana"], ["Hawk/Hestia"], ["Kitt/Katt"],
+  ["Tom/Tera"], ["Bognose/Brula"], ["Oldo/Oliviette"], ["Huzmar/Halune"],
+  ["Dusty/Dagmar"], ["Soren/Solasta"], ["Mundin/Moonie"], ["Conrad/Cassidy"],
+  ["Florian/Felicia"], ["Elroy/Eliza"], ["Willard/Willomena"], ["Boffin/Braila"],
+  ["Norris/Nephree"], ["Angelo/Aquila"], ["Ira/Isabi"], ["Rylan/Renetta"],
+  ["Axel/Amortia"], ["Poz/Pearline"], ["Xoran/Xera"], ["Duncel/Dazel"],
+  ["Quentin/Queenie"], ["Boggis/Brynwith"], ["Yorvin/Yanna"], ["Rorick/Rosie"]
 ];
 
 const surnames = [
@@ -23,9 +23,9 @@ const races = ["Elf", "Human", "Halfling", "Birdfolk", "Half-Orc", "Goblin"];
 
 const traits = [
   "Haggard", "Plain", "Filthy", "Wine-Stained", "Flirty", "Flamboyant", "Scrawny", "Towering", "Wrinkled", "Suspicious",
-  "Unkempt", "Perfumed", "Hot-Headed", "Chiseled", "Sultry", "Serene", "Hums", "Cryptic", "Weird Laugh", "Monotone",
-  "Humorless", "Princely", "Scarred", "Jolly", "Rude", "Big Ol' Hat", "Bearded", "Near-Deaf", "Frightened", "Inquisitive",
-  "Excitable", "Swaggering", "Tiny", "Young", "Motherly", "Lazy", "Drawl", "Interrupts", "Trails Off", "Mumbles"
+  "Unkempt", "Perfumed", "Hot-Headed", "Chiseled", "Sultry", "Serene", "Sing-song", "Cryptic", "Weirdly Laughing", "Monotone",
+  "Humorless", "Princely", "Scarred", "Jolly", "Rude", "Big Ol' Hat-Wearin'", "Bearded", "Near-Deaf", "Frightened", "Inquisitive",
+  "Excitable", "Swaggering", "Tiny", "Young", "Motherly", "Lazy", "Drawl", "Interrupting", "Distracted", "Mumbling"
 ];
 
 const professions = [
@@ -47,7 +47,7 @@ function generateNpc() {
   const trait = getRandomItem(traits);
   const profession = getRandomItem(professions);
 
-  const result = `${firstName} ${surname} — a ${trait} ${race} ${profession}`;
+  const result = `${firstName} ${surname} — a ${race} ${profession} ${trait}`;
   document.getElementById("npcResult").textContent = result;
 }
 
