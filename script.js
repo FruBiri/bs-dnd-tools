@@ -179,3 +179,50 @@ document.getElementById("generateShop").addEventListener("click", generateShop);
 document.getElementById("generateTavern").addEventListener("click", generateTavern);
 document.getElementById("generateWildsRegion").addEventListener("click", generateWildsRegion);
 document.getElementById("generateWildsPOI").addEventListener("click", generateWildsPOI);
+
+// Seasons array
+const seasons = ["Spring", "Summer", "Fall", "Winter"];
+
+// Weighted weather table (11 outcomes, 2d12 style bell curve weights)
+const weatherTable = [
+  {desc: "Catastrophic Storm", weight: 1}, // 2
+  {desc: "Heavy Rain and Thunder", weight: 2}, // 3
+  {desc: "Windy and Overcast", weight: 3}, // 4
+  {desc: "Light Rain and Fog", weight: 4}, // 5
+  {desc: "Cloudy with Occasional Sun", weight: 5}, // 6
+  {desc: "Mild and Pleasant", weight: 6}, // 7
+  {desc: "Warm and Sunny", weight: 5}, // 8
+  {desc: "Cool Breeze", weight: 4}, // 9
+  {desc: "Light Snow or Frost", weight: 3}, // 10
+  {desc: "Heavy Snowfall", weight: 2}, // 11
+  {desc: "Blizzard or Extreme Cold", weight: 1}, // 12
+];
+
+// Helper to pick weighted random from weatherTable
+function weightedRandomWeather() {
+  const totalWeight = weatherTable.reduce((sum, entry) => sum + entry.weight, 0);
+  let randomNum = Math.random() * totalWeight;
+  for (const entry of weatherTable) {
+    if (randomNum < entry.weight) return entry.desc;
+    randomNum -= entry.weight;
+  }
+  // fallback (should not reach)
+  return weatherTable[weatherTable.length - 1].desc;
+}
+
+// Choose Season button event
+document.getElementById("chooseSeason").addEventListener("click", () => {
+  const season = seasons[Math.floor(Math.random() * seasons.length)];
+  document.getElementById("seasonResult").textContent = `Season: ${season}`;
+});
+
+// Weather buttons event handlers
+function weatherButtonHandler(season) {
+  const weather = weightedRandomWeather();
+  document.getElementById("weatherResult").textContent = `${season} Weather: ${weather}`;
+}
+
+document.getElementById("springWeather").addEventListener("click", () => weatherButtonHandler("Spring"));
+document.getElementById("summerWeather").addEventListener("click", () => weatherButtonHandler("Summer"));
+document.getElementById("fallWeather").addEventListener("click", () => weatherButtonHandler("Fall"));
+document.getElementById("winterWeather").addEventListener("click", () => weatherButtonHandler("Winter"));
