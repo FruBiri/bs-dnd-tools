@@ -52,6 +52,46 @@ function generateNpc() {
 
 document.getElementById("generateNpc").addEventListener("click", generateNpc);
 
+// NPC Titles Arrays and functions
+
+const titles = [
+  "...the Luminous Letcher", "...the Princely Pauper", "...the Reveling Reaver", 
+  "...the Voracious Vagabond", "...the Formless Fiend", "...the Sun-Scorner",
+  "...the Macabre Mask", "...the Hanged Highwayman", "...the Siren's Sword",
+  "...the Fist of the Foglands", "...the Herald of Hellblight", "...the Ill-fated Illusionist",
+  "...the Mutinous Mercenary", "Morgrim's Mad-Dog", "...the Doom of Deltos",
+  "Knight of the Serpent", "King of the Rats", "Order of Remorhaz, Adept",
+  "Butcher of Sumarend", "Zealot of Vorsythe", "Witch of Darkwater",
+  "Captain of Lost Lemore", "Armorer of Morgrim", "Inkmaster of Velberg",
+  "Knife of Undiel", "...of the Black Chapter", "...of the Silent God",
+  "...of the Forlorn Canyon", "...of the Sanguine Shore", "...of the Abyssal Stair",
+  "Twice-Burned", "Stone-Heart", "Wild-Eye", "Bone-Breaker", "Worg-Tamer",
+  "Shade-Speaker", "Bargain-Maker", "Slime-Charmer", "Half-Devil", "Man-Eater",
+  "...the Unhurried", "...the Spiteful", "...the Impish", "...the Reckless",
+  "...the Craven", "...the Bloodless", "...the Twisted", "...the Bestial",
+  "...the Mad", "...the Inevitable", "...the Willful Wayfarer", "...the Seaborn Scholar",
+  "Priest of the Pearl", "Investigator of Iniquities", "...the Smoldering Smuggler",
+  "...the Reformed Rogue", "...the Dream-Delver", "...the Lovesick Linguist",
+  "...the Heartsfire Healer", "...the Bagpiping Barbarian", "...the Tinkering Telepath",
+  "...the Dispossessed Duke", "...the Nighthunter of Norr", "...the Sun-Blessed Smith",
+  "...the Wizard Who Wanders", "Knight of Tulips", "Agent of the Underkings",
+  "Orator of Brulane", "Mariner of Pridefall", "Architect of Hightable",
+  "Voice of Cloudkeep", "Scribe of Amora", "Earl of Pridefall", "Counselor of the Seven",
+  "Hero of Ballywide", "...of the Dryads Lake", "...of the Sunlarks", "...of the Eastern Isle",
+  "...of the Western Woods", "...of the Crown-Keepers", "Storm-Bringer", "River-Walker",
+  "Orc-Friend", "Secret-Finder", "Oath-Keeper", "Blade-Dancer", "Giant-Kin",
+  "Spell-Weaver", "Flame-Queller", "True-Seer", "...the Learned", "...the Gifted",
+  "...the Beautiful", "...the Loyal", "...the Generous", "...the Defender",
+  "...the Dazzling", "...the Miraculous", "...the Dauntless", "...the Ancient"
+];
+
+function generateTitle() {
+  const title = getRandomItem(titles);
+  document.getElementById("titleResult").textContent = `Title: ${title}`;
+}
+
+document.getElementById("generateTitle").addEventListener("click", generateTitle);
+
 // Places arrays
 
 const settlements = [
