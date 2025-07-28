@@ -226,3 +226,91 @@ document.getElementById("springWeather").addEventListener("click", () => weather
 document.getElementById("summerWeather").addEventListener("click", () => weatherButtonHandler("Summer"));
 document.getElementById("fallWeather").addEventListener("click", () => weatherButtonHandler("Fall"));
 document.getElementById("winterWeather").addEventListener("click", () => weatherButtonHandler("Winter"));
+
+// Loot Items Tables
+const trinkets = [
+ "A purse of purple velvet (empty)",
+  "A toy wind-up crab",
+  "A single caltrop made of bone",
+  "A coin that always lands on Tails",
+  "A rabbit's foot",
+  "An unfamiliar beast's tooth",
+  "A ring of obsidian",
+  "A glass chess piece (bishop)",
+  "An old wooden whistle",
+  "A torn blueprint of a dungeon",
+  "A silk sleeping cap",
+  "A small box of buttons",
+  "A crimson feather",
+  "A southward-pointing compass",
+  "A tiny vial of blood",
+  "A handbook of courtly etiquette",
+  "A lime green piece of chalk",
+  "A flask with an ounce of whisky",
+  "A portrait of an enormous man",
+  "A pair of six-sided dice"
+];
+
+const mundaneItems = [
+   "A well-made weapon",
+  "A suit of well-fitting armor",
+  "A pristine lockpicking kit",
+  "A brass spyglass",
+  "An iron bear trap",
+  "A pair of soft oiled boots",
+  "A silk rope & grappling hook",
+  "A rare vintage bottle of wine",
+  "A painted kite shield",
+  "A set of robes befitting nobility",
+  "A rolled-up masterwork painting",
+  "A collapsible ten-foot pole",
+  "A pocketwatch of gnomish make",
+  "A bottle of exquisite perfume",
+  "An ostentatious hat",
+  "A ceremonial gold mask",
+  "A silver pan flute",
+  "An elven hourglass",
+  "A tiara of silver and jade",
+  "An idol with ruby eyes"
+];
+
+const magicItems = [
+  "An Elixir of Total Restoration",
+  "A Figurine of the Loyal Steed",
+  "A Rope of Climbing",
+  "A Ne'er-Missing Arrow",
+  "A Sachet of Magic Beans",
+  "An Amulet of Beast Speech",
+  "A Bottle of Sovereign Glue",
+  "A Cloak of Featherfall",
+  "A Mask of Many Faces",
+  "A Lyre of Illusions",
+  "A Blizzard-in-a-Jar",
+  "A Bag of Holding",
+  "A Cigar of Mind-Reading",
+  "An Immovable Rod",
+  "A Belt of Giant Strength",
+  "A Pouch of Sleep Powder",
+  "A Decanter of Endless Water",
+  "A Potion of Invisibility",
+  "A Ring of Telekinesis",
+  "A Flying Sword"
+];
+
+function getRandomItem(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+document.getElementById("generateTrinket").addEventListener("click", () => {
+  document.getElementById("lootResult").textContent = getRandomItem(trinkets);
+});
+
+document.getElementById("generateMundane").addEventListener("click", () => {
+  document.getElementById("lootResult").textContent = getRandomItem(mundaneItems);
+});
+
+document.getElementById("generateMagic").addEventListener("click", () => {
+  document.getElementById("lootResult").textContent = getRandomItem(magicItems);
+});
+
+
