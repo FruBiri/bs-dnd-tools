@@ -8,14 +8,23 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <nav class="navbar">
+  <ul>
+    <li><a href="#characters">People</a></li>
+    <li><a href="#setting">Places</a></li>
+    <li><a href="#items">Loot</a></li>
+    <li><a href="#magic">Magic</a></li>
+    <li><a href="#encounters">Events</a></li>
+  </ul>
+  </nav>
   <div class="container">
-    <h1>Character Tools</h1>
+    <h1 id="characters">Character Tools</h1>
     <button id="generateNpc">🎲 Generate NPC</button>
     <button id="generateTitle">🎭 Generate Title</button>
     <div id="npcResult" class="result"></div>
     <div id="titleResult" class="result"></div>
 
-    <h1>Setting Tools</h1>
+    <h1 id="setting">Setting Tools</h1>
     <h2>Locations</h2>
     <div class="button-group">
       <button id="generateSettlement">🏘️ Random Settlement</button>
